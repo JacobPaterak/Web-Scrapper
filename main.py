@@ -11,10 +11,13 @@ total_plants = []
 total_prices = []
 # plant_names = [plant.find('p', class_='product-card-title').text for plant in plants]
 
-def Search():
+def Search(search):
     for plant,price in zip(total_plants,total_prices):
-        print(plant)
-        print(price)
+        if(search == plant):
+            print(plant + " was found and it costs " + price)
+            return
+    print("Plant not found")
+
 
 for page_number in range(1, total_pages + 1):
     url = base_url.format(page_number)
@@ -29,6 +32,6 @@ for page_number in range(1, total_pages + 1):
 
 
 
-
-Search()
+search = input("Please input what type of plant you are looking for ")
+Search(search)
 
