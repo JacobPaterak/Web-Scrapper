@@ -34,16 +34,13 @@ print("Welcome to Jacobs plants search program")
 
 print("\t1,) Do you want to search a plant up by name ")
 print("\t2,) Do you want to list of all the plants available")
-print("\t3,) Do you want to search for all plants of a certain type ")
 print()
 userinput = input("What do you want to do ")
 if(userinput == "1"):
-    userPlant = input("What is the name of the plant you are looking for")
+    userPlant = input("What is the name of the plant you are looking for ")
     Search(userPlant)
 elif(userinput == "2"):
     DisplayAll()
-elif(userinput == "3"):
-    print("Working on it")
 else:
     print("Invalid Input")
 
